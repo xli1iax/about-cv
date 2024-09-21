@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    left: 0;
+    top: 0;
+    display: flex;
+    background: #EF3B36;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #EF3B36);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #EF3B36); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem ;
+    border-radius: 0.2rem;
+}
+
+header .logo {
+    font-size: 2.2rem;
+    color: black;
+    font-weight: 800;
+}
+
+header .navbar ul {
+    display: flex;
+    gap: 1.5rem;
+    background-color: rgba(0, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+    border-radius: 0.8rem;
+}
+
+header .navbar ul li a {
+    padding: 1rem;
+    color: black;
+    font-size: 1rem;
+
+}
+
+header .navbar ul li a:hover {
+    background-position: center;
+    color: aqua;
+}
+
+#menu {
+    display: none;
+}
+
+label {
+    font-size: 2rem;
+    border: .2rem solid #222;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    line-height: 1rem;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 70%;
+        right: 0;
+        background: #FFFFFF;
+        border-top:  solid #FFFFFF;
+        display: none;
+    }
+
+    header .navbar ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 2rem 0rem;
+    }
+
+
+
+    label {
+        display: block;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+
+    }
+
+    label .close-icon {
+        display: none;
+    }
+
+    #menu:checked ~ label .menu-icon {
+        display: none;
+    }
+
+    #menu:checked ~label .close-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+
+}
+
+.navbar {
+}
