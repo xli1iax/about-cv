@@ -6,22 +6,87 @@
     list-style-type: none;
 }
 
-body {
-    width: 100%;
-    min-height: 100vh;
-}
-
 .content {
     margin-top: 60px; /* Добавляем отступ сверху для основного содержимого, чтобы оно не перекрывалось меню */
     padding: 20px;
 }
-.test img {
-    right: 0;
-    float: right;
+.map {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.test p {
 
+.content figure {
+    position: relative;
+    display: inline-block;
+}
+
+.content figure img {
+    z-index: -1;
+    display: block;
+}
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+path{
+    position: absolute;
+    opacity: 0.2;
+    fill: white;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+
+
+path:hover{
+    opacity: 0.9;
+    transition: 0.3s;
+
+}
+
+#tooltip {
+    position: absolute;
+    cursor: pointer;
+    padding: 7px;
+    font-size: 10em;
+}
+
+#tooltipText {
+    position: absolute;
+    left: 50px;
+    top: 0;
+
+    transform: translateX(-50%);
+    background-color: #000;
+    color: white;
+    white-space: nowrap;
+    padding: 10px 15px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#tooltipText::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+}
+
+#tooltip:hover #tooltipText {
+    top: -130px;
+    visibility: visible;
+    opacity: 1;
 }
 
 header {
@@ -31,7 +96,7 @@ header {
     left: 0;
     top: 0;
     display: flex;
-    background: #FD7171;
+    background: #FD7171;  /* fallback for old browsers */
     justify-content: space-between;
     align-items: center;
     padding: 2rem ;
@@ -158,7 +223,11 @@ header .navbar ul li a:hover span:last-child:after {
     opacity: 1;
 }
 
-@media  screen and (max-width: 1000px) {
+@media (max-width: 768px) {
+    header {
+
+        z-index: 10; /* Устанавливаем высокий z-index для header */
+    }
     header .navbar {
         position: absolute;
         top: 100%;
@@ -176,6 +245,7 @@ header .navbar ul li a:hover span:last-child:after {
         background-color: rgba(255, 95, 75, 0.16);
         backdrop-filter: blur(18px);
         border-radius: 2rem;
+        z-index: 1;
     }
 
 

@@ -9,13 +9,11 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: .8rem;
 }
 
 th, td {
     padding: 5px;
     text-align: center;
-    border: 1px solid #ddd;
     border-radius: .2rem;
 }
 
@@ -212,22 +210,12 @@ header .navbar ul li a:hover span:last-child:after {
     opacity: 1;
 }
 
-@media (max-width: 1200px) {
-
-}
-
 @media (max-width: 1000px) {
-
-}
-
-@media (max-width: 768px) {
     header .navbar {
         position: absolute;
         top: 100%;
         left: 70%;
         right: 5%;
-        background: #FFFFFF;
-        border-top:  solid #FFFFFF;
         display: none;
     }
 
@@ -238,8 +226,8 @@ header .navbar ul li a:hover span:last-child:after {
         align-items: center;
         padding: 2rem 0rem;
         background-color: rgba(255, 95, 75, 0.16);
-        backdrop-filter: blur(10px);
-        border-radius: 0.8rem;
+        backdrop-filter: blur(18px);
+        border-radius: 2rem;
     }
 
 
