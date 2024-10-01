@@ -5,28 +5,19 @@
     text-decoration: none;
     list-style-type: none;
 }
-
 .content {
     margin-top: 60px; /* Добавляем отступ сверху для основного содержимого, чтобы оно не перекрывалось меню */
     padding: 20px;
 }
-.map {
-    position: relative;
-    text-align: center;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-
-.content figure {
+.image-container {
     position: relative;
     display: inline-block;
 }
 
-.content figure img {
+.image-container img {
     z-index: -1;
     display: block;
+    /*visibility: hidden;*/
 }
 svg {
     position: absolute;
@@ -38,56 +29,72 @@ svg {
 path{
     position: absolute;
     opacity: 0.2;
-    fill: white;
+    fill: blue;
     cursor: pointer;
     transition: 0.7s;
 }
 
+rect{
+    z-index: -1;
+}
+/*.tooltip {*/
+/*    position: relative;*/
+/*}*/
+/*path:hover {*/
+/*    opacity: 1;*/
+/*}*/
 
-
-path:hover{
-    opacity: 0.9;
-    transition: 0.3s;
-
+/* Сховати текст за замовчуванням */
+.tooltip-text, rect {
+    display: none; /* Спочатку приховуємо текст */
+    pointer-events: none;
+}
+.tooltip:hover path {
+    opacity: 0.7; /* Зміна прозорості картинки при наведенні */
 }
 
-#tooltip {
-    position: absolute;
-    cursor: pointer;
-    padding: 7px;
-    font-size: 10em;
+.tooltip:hover .tooltip-text {
+    display: block;
+    opacity: 1; /* Текст буде плавно з'являтися */
 }
 
-#tooltipText {
-    position: absolute;
-    left: 50px;
-    top: 0;
-
-    transform: translateX(-50%);
-    background-color: #000;
-    color: white;
-    white-space: nowrap;
-    padding: 10px 15px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.5s ease;
+.tooltip:hover rect {
+    display: block;
+    opacity: 0.5; /* Прямокутник з'явиться при наведенні на шлях */
 }
 
-#tooltipText::before {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 15px solid;
-    border-color: #000 #0000 #0000 #0000;
+.tooltip-text:hover {
+    opacity: 1; /* Текст залишається видимим при наведенні */
 }
 
-#tooltip:hover #tooltipText {
-    top: -130px;
-    visibility: visible;
-    opacity: 1;
+rect:hover {
+    opacity: 0.7;
 }
+
+/* Показати текст при наведенні */
+/*g:hover .tooltip-text {*/
+/*    display: block;*/
+/*    opacity: 1;*/
+/*}*/
+/*.tooltip-text:hover g {*/
+/*    opacity: 1;*/
+/*}*/
+
+
+/* Група для стилізації */
+/*.tooltip {*/
+/*    cursor: pointer;*/
+/*}*/
+
+/*!* Показати відповідний блок при наведенні на SVG-шлях *!*/
+/*.E:hover ~ .block-E,*/
+/*.D:hover ~ .block-D,*/
+/*.C:hover ~ .block-C,*/
+/*.B:hover ~ .block-B,*/
+/*.A:hover ~ .block-A {*/
+/*    visibility: visible;*/
+/*}*/
+
 
 header {
     position: fixed;
@@ -96,7 +103,8 @@ header {
     left: 0;
     top: 0;
     display: flex;
-    background: #FD7171;  /* fallback for old browsers */
+    box-shadow: 0 2px 5px 0 #b490ca ;
+    background: #8294C4;
     justify-content: space-between;
     align-items: center;
     padding: 2rem ;
@@ -125,7 +133,7 @@ header .navbar ul li a {
 header .navbar ul li a:hover {
     background-position: center;
     background-size: 10px, 2px,2px, 10px;
-    color: indianred;
+    color: #DBDFEA;
 }
 
 header .navbar ul li a span:first-child:before {
@@ -136,8 +144,8 @@ header .navbar ul li a span:first-child:before {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-top: 2px solid indianred;
-    border-left: 2px solid indianred;
+    border-top: 2px solid #DBDFEA;
+    border-left: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -150,8 +158,8 @@ header .navbar ul li a span:first-child:after {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-top: 2px solid indianred;
-    border-right: 2px solid indianred;
+    border-top: 2px solid #DBDFEA;
+    border-right: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -164,8 +172,8 @@ header .navbar ul li a span:last-child:before {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-bottom: 2px solid indianred;
-    border-left: 2px solid indianred;
+    border-bottom: 2px solid #DBDFEA;
+    border-left: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -178,8 +186,8 @@ header .navbar ul li a span:last-child:after {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-bottom: 2px solid indianred;
-    border-right: 2px solid indianred;
+    border-bottom: 2px solid #DBDFEA;
+    border-right: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -223,11 +231,7 @@ header .navbar ul li a:hover span:last-child:after {
     opacity: 1;
 }
 
-@media (max-width: 768px) {
-    header {
-
-        z-index: 10; /* Устанавливаем высокий z-index для header */
-    }
+@media  screen and (max-width: 1000px) {
     header .navbar {
         position: absolute;
         top: 100%;
@@ -241,11 +245,10 @@ header .navbar ul li a:hover span:last-child:after {
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        padding: 2rem 0rem;
-        background-color: rgba(255, 95, 75, 0.16);
+        padding: 2rem 0;
+        background-color: rgba(130, 148, 196, 0.4); /* 0.8 - прозорість */
         backdrop-filter: blur(18px);
         border-radius: 2rem;
-        z-index: 1;
     }
 
 
