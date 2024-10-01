@@ -5,20 +5,44 @@
     text-decoration: none;
     list-style-type: none;
 }
-.content {
-    margin-top: 60px; /* Добавляем отступ сверху для основного содержимого, чтобы оно не перекрывалось меню */
+.map-info {
+    margin-top: 80px; /* Відступ зверху для основного контенту */
     padding: 20px;
+    display: flex;
+    /* Розміщуємо елементи в рядок */
+    align-items: flex-start; /* Вирівнюємо елементи по верху */
+    justify-content: flex-start; /* Розміщуємо елементи зліва направо */
+    width: 100%; /* Займає всю ширину контейнера */
+    gap: 20px; /* Відступ між блоками */
 }
+
 .image-container {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex: 1; /* Задаємо ширину зображення відносно іншого контенту */
+    max-width: 50%; /* Обмежуємо максимальну ширину контейнера зображення до 50% */
+    text-align: center; /* Центруємо текст підпису */
+
+}
+figcaption {
+    position: absolute;
+    bottom: -29px;
+}
+.info-about {
+    flex: 1;
+    display: block;
+    max-width: 50%;
+     /* Задаємо ширину блоку з інформацією */
 }
 
 .image-container img {
-    z-index: -1;
-    display: block;
-    /*visibility: hidden;*/
+    width: 100%; /* Зображення займає всю ширину контейнера */
+    height: auto; /* Автоматичне коригування висоти */
+    object-fit: cover; /* Зображення без спотворень */
+    /*display: block;*/
+    visibility: visible;
 }
+
 svg {
     position: absolute;
     top: 0;
@@ -36,15 +60,13 @@ path{
 
 rect{
     z-index: -1;
-}
-/*.tooltip {*/
-/*    position: relative;*/
-/*}*/
-/*path:hover {*/
-/*    opacity: 1;*/
-/*}*/
 
-/* Сховати текст за замовчуванням */
+}
+
+rect {
+    fill: whitesmoke; /* Колір заливки */
+    fill-opacity: 95%; /* Прозорість */ /* Зробити кути закругленими, якщо потрібно */
+}
 .tooltip-text, rect {
     display: none; /* Спочатку приховуємо текст */
     pointer-events: none;
@@ -67,34 +89,20 @@ rect{
     opacity: 1; /* Текст залишається видимим при наведенні */
 }
 
-rect:hover {
-    opacity: 0.7;
+@media  screen and (max-width: 1200px) {
+    .map-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .info-about {
+        padding-top: 1%;
+        max-width: 90%;
+    }
+
+    .image-container {
+        max-width: 90%;
+    }
 }
-
-/* Показати текст при наведенні */
-/*g:hover .tooltip-text {*/
-/*    display: block;*/
-/*    opacity: 1;*/
-/*}*/
-/*.tooltip-text:hover g {*/
-/*    opacity: 1;*/
-/*}*/
-
-
-/* Група для стилізації */
-/*.tooltip {*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*!* Показати відповідний блок при наведенні на SVG-шлях *!*/
-/*.E:hover ~ .block-E,*/
-/*.D:hover ~ .block-D,*/
-/*.C:hover ~ .block-C,*/
-/*.B:hover ~ .block-B,*/
-/*.A:hover ~ .block-A {*/
-/*    visibility: visible;*/
-/*}*/
-
 
 header {
     position: fixed;
@@ -109,6 +117,7 @@ header {
     align-items: center;
     padding: 2rem ;
     border-radius: 0.2rem;
+    z-index: 10;
 }
 
 header .logo {
