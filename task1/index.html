@@ -1,53 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel = "stylesheet" href = "style.css" type = "text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O mne</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
-    <header>
-        <a href = "#" class = "logo">Logo</a>
-        <input type="checkbox" id="menu">
-        <label for="menu">
-            <img class = "menu-icon" src="./images/menu-icon.svg" alt="Menu Icon" >
-            <img class = "close-icon" src = "./images/close-icon.svg" alt = "Close icon" >
-        </label>
-        <nav class = "navbar">
-            <ul>
-                <li>
-                    <a href = "index.html">About<span></span><span></span></a>
-                </li>
-                <li>
-                    <a href = "cv.html">CV<span></span><span></span></a>
-                </li>
-                <li>
-                    <a href = "syllabus.html">Syllabus<span></span><span></span></a>
-                </li>
-                <li>
-                    <a href = "image.html">Picture<span></span><span></span></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="content">
-        <article class = "test">
-            <h2>About me</h2>
-            <p>обтекание картинки текстом в htmlnjhbvgfcdxsedrftgyhujiko,imjnuhbygvtfcrdxessssdrftgyhujikolpppkmjnhgftdxscfgyhujiklmjhgfdxsdcfgtyhujikolkmjhgfdxcfvgbhnjuikol,mknjhbgvfcvbghjkikmjnhbgvfgbhjuiolkmjhgvbnhjk,mnbhjnbnhjmnbhjnb nhjmnbhjunhjunhjumnbhjumnhjnbhjuhvfgthbgvcfgtfcdcxsdsweder4f5t6yty7u8iio90ppp[-';lkokmjnhjuhnbgvfgtfcdrtgfdrt5g6y7ui9oplkoplkjijhbgvfrgdswertyuiop;lokijuhygtrfeddrfgthyujikolkjhgtfrdesxdcfvghjkll.,kmjnhbgfdfghjklkjhygtfrgthyujikolpoiuytrertyuioiuytrewe4r567890</p>
-            <p> fweffeewwEFWFerdvgtrgrgegrergegergff
-            refreferfrfrefe</p>
-            <figure>
-                <img src = "./images/me.jpg" alt = "me" height = 250 width = 100>
-                <figcaption>This is me</figcaption>
-            </figure>
-        </article>
-        якась вертикальна панель
-        <article>
-            <p>обтекание картинки текстом в htmlnjhbvgfcdxsedrftgyhujiko,imjnuhbygvtfcrdxessssdrftgyhujikolpppkmjnhgftdxscfgyhujiklmjhgfdxsdcfgtyhujikolkmjhgfdxcfvgbhnjuikol,mknjhbgvfcvbghjkikmjnhbgvfgbhjuiolkmjhgvbnhjk,mnbhjnbnhjmnbhjnb nhjmnbhjunhjunhjumnbhjumnhjnbhjuhvfgthbgvcfgtfcdcxsdsweder4f5t6yty7u8iio90ppp[-';lkokmjnhjuhnbgvfgtfcdrtgfdrt5g6y7ui9oplkoplkjijhbgvfrgdswertyuiop;lokijuhygtrfeddrfgthyujikolkjhgtfrdesxdcfvghjkll.,kmjnhbgfdfghjklkjhygtfrgthyujikolpoiuytrertyuioiuytrewe4r567890</p>
-        </article>
+<header>
+    <a href="#" class="logo">Cviko1</a>
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <img class="menu-icon" src="./images/menu-icon.svg" alt="Menu Icon">
+        <img class="close-icon" src="./images/close-icon.svg" alt="Close icon">
+    </label>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">O mne<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="cv.html">Životopis<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="syllabus.html">Rozvrh<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="image.html">Obrázok<span></span><span></span></a>
+            </li>
+        </ul>
+    </nav>
+    <label for="menu" class="overlay"></label>
+</header>
+<div class="content">
+    <h1 class="about">O mne</h1>
+    <div class="photo">
+        <img class="box" src="./images/me.png" alt="Ваше фото">
+        <aside>
+            „Tajomstvom úspechu v živote je byť pripravený na príležitosti, keď sa objavia.“ - Benjamin Disraeli
+        </aside>
     </div>
-    <aside>
-        /*тут цитатат кредо хз*/
-    </aside>
+    <section class="text">
+        <div class="slovak">
+            <h2>Slovenska verzia / Slovak version</h2>
+            <p class="description">Dobrý deň! Volám sa Lilia a pochádzam z Ukrajiny. Od detstva som bola obklopená rôznymi koníčkami, ktoré formovali moju povahu a rozširovali moje obzory. Vždy som sa vášnivo zaujímala o hudbu, najmä o hru na gitare. Fascinoval ma aj tanec, maľovanie a práca s korálkami. Pletenie a spev sa stali nielen mojím koníčkom, ale aj spôsobom sebavyjadrenia.</p>
+            <br>
+            <p class="description">Moja cesta za vzdelaním viedla na Slovenskú technickú univerzitu v Bratislave, kde som študovala aplikovanú informatiku. Tam sa však moja túžba po sebarozvoji nezastavila. Absolvoval som aj kurzy na Mate Academy, kde som si prehĺbil svoje zručnosti v oblasti programovania a informačných technológií. Počas štúdia som sa zúčastňoval na rôznych projektoch a iniciatívach, ktoré mi pomohli rozvinúť praktické zručnosti a získať cenné skúsenosti.</p>
+            <br>
+            <p class="description">Moja kariéra sa ešte oficiálne nezačala, ale veľmi sa na túto etapu svojho života teším. Túžba po rozvoji vedomostí a zručností mi pomáha pripraviť sa na výzvy, ktoré ma čakajú. Aktívne sa venujem samoštúdiu, sledujem novinky v oblasti technológií a zúčastňujem sa na webových seminároch a online kurzoch, aby som držal krok s novými trendmi.</p>
+            <br>
+            <p class="description">Teraz bývam na internáte Mladosť. Mám dve sestry, dve mačky, dvoch psov a dva papagáje, čo dodáva môjmu životu zábavu a útulnosť. Vo voľnom čase rada pozerám filmy, programujem, počúvam hudbu a cestujem. Dôležitú úlohu v mojom živote zohrávajú aj prechádzky a aktivity v prírode, ktoré mi pomáhajú udržiavať rovnováhu a harmóniu. Jedným z mojich snov je navštíviť rôzne časti sveta a spoznať nové kultúry a ľudí.</p>
+            <br>
+            <p class="description">Pevne verím, že nie všetko na svete je zlé a že každý je schopný dosiahnuť veľké veci, ak sa snaží o lepší život. Tieto presvedčenia mi pomáhajú optimisticky hľadieť do budúcnosti a ísť ďalej. Verím, že každý môže zmeniť svet k lepšiemu tým, že svojou troškou prispeje k rozvoju spoločnosti.</p>
+            <br>
+            <p class="description">Medzi moje plány do budúcnosti patrí získať dobrú prácu v oblasti IT a postupne stúpať po kariérnom rebríčku. Snívam o tom, že využijem svoj potenciál, dosiahnem profesionálny úspech a budem žiť lepší život plný nových príležitostí a úspechov. Svoje vedomosti a zručnosti chcem využiť aj na pomoc iným, najmä na podporu mladých ľudí, ktorí práve začínajú svoju cestu vo svete IT.</p>
+            <br>
+        </div>
+        <div class="ukrainian">
+            <h2>Українська версія / Ukrainian version</h2>
+            <p class="description">Доброго дня! Мене звати Ліля, і я родом з України. З самого дитинства мене оточували різноманітні захоплення, які формували мій характер і розширювали горизонти. Я завжди мала пристрасний інтерес до музики, особливо до гри на гітарі. Мене також заворожували танці, мистецтво малювання і вишивання бісером. В'язання та спів стали для мене не тільки захопленням, але й способом вираження себе.</p>
+            <br>
+            <p class="description">Моя освітня дорога привела мене до Словацького технічного університету в Братиславі, де я здобувала знання з прикладної інформатики. Проте моє прагнення до саморозвитку не зупинилося на цьому. Я також пройшла курси в Mate Academy, де поглибила свої навички в програмуванні та інформаційних технологіях. Протягом навчання я брала участь у різних проектах та ініціативах, які допомогли мені розвинути практичні навички та отримати цінний досвід.</p>
+            <br>
+            <p class="description">Наразі моя кар'єра офіційно не розпочалася, але я з великим натхненням готуюся до цього етапу свого життя. Моє прагнення до знань і розвитку навичок допомагає мені готуватися до викликів, які чекають попереду. Я активно займаюся самонавчанням, слідкую за новинами в сфері технологій і беру участь у вебінарах та онлайн-курсах, щоб завжди бути в курсі нових тенденцій.</p>
+            <br>
+            <p class="description">Зараз я проживаю в гуртожитку Mladosť. У мене є дві сестри, два коти, дві собаки і два папуги, що додає веселощів і затишку в моє життя. У вільний час я люблю переглядати фільми, програмувати, слухати музику і подорожувати. Прогулянки та відпочинок на свіжому повітрі також займають важливе місце в моєму житті, допомагаючи мені зберігати баланс і гармонію. Однією з моїх мрій є відвідування різних куточків світу, знайомство з новими культурами і людьми.</p>
+            <br>
+            <p class="description">Я твердо вірю, що не все у світі так погано, і кожна людина здатна досягнути великих висот, якщо прагне до кращого життя. Ці переконання допомагають мені з оптимізмом дивитися в майбутнє і не зупинятися на досягнутому. Я вважаю, що кожна людина може змінити світ на краще, роблячи свій маленький внесок у суспільство.</p>
+            <br>
+            <p class="description">Мої плани на майбутнє включають здобуття хорошої роботи в сфері інформаційних технологій та поступове просування по кар'єрній драбині. Я мрію реалізувати свій потенціал, досягти професійних успіхів і жити краще життя, сповнене нових можливостей і звершень. Я також прагну використовувати свої знання і навички для допомоги іншим, зокрема для підтримки молодих людей, які тільки починають свій шлях у світі ІТ.</p>
+        </div>
+        <section class="vertical-list">
+            <h4>Predmety v tomto semestri</h4>
+            <ul>
+                <li>Webové technológie 1</li>
+                <li>Lineárna algebra</li>
+                <li>Mikropočítače a ich programovanie</li>
+                <li>Diskrétne udalostné systémy</li>
+                <li>Počítačové siete</li>
+                <li>Telesná kultúra 3</li>
+            </ul>
+        </section>
+    </section>
+    <footer>
+        <p>@Lilia Zhuravel</p>
+    </footer>
+</div>
 </body>
 </html>

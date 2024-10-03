@@ -1,4 +1,3 @@
-/* styles.css */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +9,7 @@
 @font-face {
     font-family: 'bitter';
     src: url("fonts/Bitter-Medium.ttf") format("truetype"),
-         url("fonts/Bitter-Regular.ttf") format("truetype");
+    url("fonts/Bitter-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -24,91 +23,107 @@
 
 body {
     margin: 0;
-    font-family : 'Playwrite', serif;
+    font-family: 'Playwrite', serif;
     padding: 0;
     display: flex;
     justify-content: center;
-    /*flex-direction: column;*/
-    align-items: center;
-    height: 100vh;
+    background-color: #F1F1F6;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
 }
-
 
 .content {
-    margin-top: 60px; /* Добавляем отступ сверху для основного содержимого, чтобы оно не перекрывалось меню */
-    padding: 20px;
-
+    margin-top: 120px;
+    padding: 30px;
 }
 
-.container {
-    display:flex;
-    width: 95%;
-    margin-top: 120px;
-    gap: 15px;
-    height: calc(100vh - 60px);
+h1 {
+    color: #333;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ACB1D6;
+    margin-bottom: 30px;
+}
+
+.box {
+    flex-direction: column;
 }
 
 h3 {
     font-family: 'bitter', serif;
-    text-decoration-line: initial;
+    font-size: 24px;
     text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 95%;
+    gap: 15px;
+    margin-top: 100px;
+    min-height: 100vh;
 }
 
 .column1 {
     display: flex;
     padding: 10px;
-    background-image: linear-gradient(to bottom, skyblue, antiquewhite);
+    background-image: linear-gradient(to bottom, #ACB1D6, #F1F1F6);
     flex: 1;
     border-radius: 2rem;
     text-align: left;
-    align-items: center; /* Вертикальне вирівнювання по центру */
-    justify-content: center; /* Горизонтальне вирівнювання по центру */
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .photo {
-    max-width: 100%; /* Забезпечує, що фото не буде перевищувати ширину колонки */
-    max-height: 70%; /* Забезпечує, що фото не буде перевищувати висоту колонки */
-    border-radius: 1rem; /* Додає закруглення до фото */
-}.text-icon {
-     display: flex; /* Використовуємо flex для вирівнювання іконки і тексту по горизонталі */
-     align-items: center; /* Вирівнюємо іконку та текст по вертикалі */
-     margin: 10px 0; /* Відступи між елементами списку */
- }
+    max-width: 100%;
+    max-height: 70%;
+    border-radius: 1rem;
+}
+
+.text-icon {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
 
 .text-icon img {
-    margin-right: 7px; /* Відступ між іконкою та текстом */
-    width: 30px; /* Розмір іконки */
-    height: auto; /* Автоматична висота */
+    margin-right: 7px;
+    width: 30px;
+    height: auto;
 }
 
 .text-icon span {
-    font-size: 16px; /* Розмір тексту */
-    color: #000; /* Колір тексту */
-    text-decoration: none; /* Прибираємо підкреслення */
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
 }
 
 .text-icon a {
-    display: flex; /* Вирівнювання тексту та іконки всередині посилання */
-    align-items: center; /* Центруємо елементи по вертикалі */
-    text-decoration: none; /* Прибираємо підкреслення у посилання */
-    color: inherit; /* Залишаємо колір тексту незмінним */
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
 }
 
 .column2 {
-    background-color: #5ee7df; /* Білий фон для блоку */
+    background-image: linear-gradient(to bottom, #E1CCEC, #F1F1F6);
     padding: 20px;
     flex: 3;
-    border-radius: 10px; /* Заокруглені кути */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для блоку */
-    text-align: center; /* Центрує текст по горизонталі */
-    width: 300px; /* Фіксована ширина блоку */
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
 }
 
 h3 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #333; /* Темний текст */
+    color: #333;
 }
 
 li {
@@ -118,87 +133,102 @@ li {
 
 hr {
     border: none;
-    border-top: 1px solid #ccc; /* Тонка сіра лінія */
-    margin: 20px 0; /* Відступи зверху і знизу */
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
 }
 
-.education, .pc-skills, .lang-skills{
+.education,
+.pc-skills,
+.lang-skills {
     display: flex;
     gap: 10px;
 }
+
 .head {
     flex: 1;
     border-right: 2px solid #ccc;
+    padding: 3px;
 }
+
 .info {
     flex: 3;
     top: 0;
 }
-/* Додаткове центрування для списків */
-.education ul, .pc-skills ul, .lang-skills ul {
+
+.info ul li {
+    font-size: 0.9rem;
+}
+
+.education ul,
+.pc-skills ul,
+.lang-skills ul {
     display: flex;
     flex-direction: column;
     text-align: left;
-    /*align-items: center; !* Центрує елементи списку *!*/
 }
 
 .contact {
-  margin: 5px;
+    margin: 5px;
     font-family: 'bitter', serif;
-    box-shadow: 0 2px 5px 0 #b490ca ;
-    padding: 2rem ;
+    box-shadow: 0 2px 5px 0 #b490ca;
+    padding: 2rem;
     border-radius: 0.2rem;
     justify-content: center;
 }
 
-
-
-
-
 @media (max-width: 1000px) {
-
-    .column1, .column2 {
+    .column1,
+    .column2 {
         display: flex;
         width: 45%;
+        height: auto;
         flex: 1;
         overflow: hidden;
+        flex-direction: column;
     }
 
-    .text-icon a{
- /* Центруємо елементи по горизонталі */
-        font-size: 0.3rem;
-
+    .text-icon a span {
+        font-size: 0.7rem;
     }
 
     .photo {
-        width: 100%; /* Фото займатиме всю ширину контейнера */
-        height: auto; /* Автоматична висота для збереження пропорцій */
-        max-width: 400px; /* Максимальна ширина, щоб не розтягувати на великих екранах */
+        max-width: 400px;
+        width: 70%;
+        height: auto;
     }
+
     .contact {
-        width: 100%; /* Фото займатиме всю ширину контейнера */
+        width: 100%;
         height: auto;
         margin: 0;
         padding: 3px;
+        justify-content: center;
     }
 
+    .head {
+        font-size: 0.7rem;
+    }
+
+    .info ul li {
+        font-size: 0.5rem;
+        overflow-wrap: break-word;
+        overflow: auto;
+    }
 }
 
-
 header {
+    font-family: 'bitter', sans-serif;
     position: fixed;
-    font-family: 'bitter', serif;
     width: 100%;
     height: 70px;
     left: 0;
     top: 0;
     display: flex;
-
-    box-shadow: 0 2px 5px 0 #b490ca ;
-    background: #FD7171;  /* fallback for old browsers */
+    box-shadow: 0 2px 5px 0 #b490ca;
+    background: #8294C4;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem ;
+    padding: 2rem;
     border-radius: 0.2rem;
 }
 
@@ -223,8 +253,8 @@ header .navbar ul li a {
 
 header .navbar ul li a:hover {
     background-position: center;
-    background-size: 10px, 2px,2px, 10px;
-    color: indianred;
+    background-size: 10px, 2px, 2px, 10px;
+    color: #DBDFEA;
 }
 
 header .navbar ul li a span:first-child:before {
@@ -235,8 +265,8 @@ header .navbar ul li a span:first-child:before {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-top: 2px solid indianred;
-    border-left: 2px solid indianred;
+    border-top: 2px solid #DBDFEA;
+    border-left: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -249,8 +279,8 @@ header .navbar ul li a span:first-child:after {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-top: 2px solid indianred;
-    border-right: 2px solid indianred;
+    border-top: 2px solid #DBDFEA;
+    border-right: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -263,8 +293,8 @@ header .navbar ul li a span:last-child:before {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-bottom: 2px solid indianred;
-    border-left: 2px solid indianred;
+    border-bottom: 2px solid #DBDFEA;
+    border-left: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -277,8 +307,8 @@ header .navbar ul li a span:last-child:after {
     width: 8px;
     height: 8px;
     background: transparent;
-    border-bottom: 2px solid indianred;
-    border-right: 2px solid indianred;
+    border-bottom: 2px solid #DBDFEA;
+    border-right: 2px solid #DBDFEA;
     transition: .2s;
     opacity: 0;
 }
@@ -322,7 +352,7 @@ header .navbar ul li a:hover span:last-child:after {
     opacity: 1;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     header .navbar {
         position: absolute;
         top: 100%;
@@ -336,12 +366,11 @@ header .navbar ul li a:hover span:last-child:after {
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        padding: 2rem 0rem;
-        background-color: rgba(255, 95, 75, 0.16);
+        padding: 2rem 0;
+        background-color: rgba(130, 148, 196, 0.4);
         backdrop-filter: blur(18px);
         border-radius: 2rem;
     }
-
 
     label {
         display: block;
@@ -349,7 +378,6 @@ header .navbar ul li a:hover span:last-child:after {
 
     #menu:checked ~ .navbar {
         display: block;
-
     }
 
     label .close-icon {
@@ -362,5 +390,29 @@ header .navbar ul li a:hover span:last-child:after {
 
     #menu:checked ~ label .close-icon {
         display: block;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0);
+        z-index: -1;
+        display: none;
+        border: none;
+    }
+
+    #menu:checked ~ .overlay {
+        display: block;
+    }
+
+    .overlay:hover {
+        display: none;
+    }
+
+    .overlay:hover ~ #menu:checked {
+        display: none;
     }
 }

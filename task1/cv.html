@@ -1,46 +1,98 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>CV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleCV.css" type="text/css">
+    <title>Životopis</title>
 </head>
 <body>
-    <header>
-        logo?hz
-        <nav>
-            <h1>Page</h1>
-            <ul>
-                <li>
-                    <a href = "index.html">About me</a>
-                </li>
-                <li>
-                    <a href = "cv.html">CV</a>
-                </li>
-                <li>
-                    <a href = "syllabus.html">Syllabus</a>
-                </li>
-                <li>
-                    <a href = "image.html">Image</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <figure>
-        <img src = "./images/me.jpg" alt = "me" height = 250 width = 100>
-        <figcaption>This is me</figcaption>
-    </figure>
-    <footer>contacts</footer>
-    <section>
-        <h2>CV</h2>
-        <article>
-            dosiahnute vzdelanie
-        </article>
-        <article>
-            pocitacove zrucnosti
-        </article>
-        <article>
-            jazykove zrucnosti
-        </article>
-    </section>
+<header>
+    <a href="#" class="logo">Cviko1</a>
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <img class="menu-icon" src="./images/menu-icon.svg" alt="Menu Icon">
+        <img class="close-icon" src="./images/close-icon.svg" alt="Close icon">
+    </label>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">O mne<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="cv.html">Životopis<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="syllabus.html">Rozvrh<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="image.html">Obrázok<span></span><span></span></a>
+            </li>
+        </ul>
+    </nav>
+    <label for="menu" class="overlay"></label>
+</header>
+<div class="container">
+    <div class="column1">
+        <h1>Životopis</h1>
+        <img class="photo" src="images/me2.png" alt="me" height="300">
+        <ul class="contact">
+            <li class="text-icon">
+                <a href="mailto:xzhuravel@stuba.sk">
+                    <img class="mail-icon" src="images/mail.png" alt="mail" width="30">
+                    <span> xzhuravel</span>
+                </a>
+            </li>
+            <li class="text-icon">
+                <a class="phone" href="tel:+421950706604">
+                    <img class="phone-icon" src="images/phone.png" alt="phone" width="30">
+                    <span>+421950706604</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="column2">
+        <section>
+            <div class="education">
+                <div class="head"><h4>Dosiahnuté vzdelanié:</h4></div>
+                <div class="info">
+                    <ul>
+                        <li>Umelecká škola v Kopyčynciach pomenovaná po Klymovi Čičkovi-Andrijenkovi</li>
+                        <li>Školské lýceum č. 1, Kopychynci</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <div class="pc-skills">
+                <div class="head"><h4>Počítačové zručnosti:</h4></div>
+                <div class="info">
+                    <ul>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Html, Css, JavaScript</li>
+                        <li>Java</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <div class="lang-skills">
+                <div class="head"><h4>Jazykové zručnosti:</h4></div>
+                <div class="info">
+                    <ul>
+                        <li>Ukrajinčina - rodný jazyk(C2)</li>
+                        <li>Angličtina(B1)</li>
+                        <li>Slovenský jazyk(B1)</li>
+                        <li>Nemecký jazyk(A2)</li>
+                        <li>Kórejčina(A1)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 </body>
 </html>

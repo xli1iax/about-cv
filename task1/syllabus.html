@@ -1,88 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Syllabus</title>
-    <link rel = "stylesheet" href = "styleSyllabus.css" type = "text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rozvrh</title>
+    <link rel="stylesheet" href="styleSyllabus.css" type="text/css">
 </head>
 <body>
-    <header>
-        <a href = "#" class = "logo">Logo</a>
-        <input type="checkbox" id="menu">
-        <label for="menu">
-            <img class = "menu-icon" src="./images/menu-icon.svg" alt="Menu Icon" >
-            <img class = "close-icon" src = "./images/close-icon.svg" alt = "Close icon" >
-        </label>
-        <nav class = "navbar">
-            <ul>
-                <li>
-                    <a href = "index.html">About<span></span><span></span></a>
-                </li>
-                <li>
-                    <a href = "cv.html">CV<span></span><span></span></a>
-                </li>
-                <li>
-                    <a href = "syllabus.html">Syllabus<span></span><span></span></a>
-                </li>
-                <li>
-                    <a href = "image.html">Picture<span></span><span></span></a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class = "content">
-        <h2> Syllabus</h2>
-        <article>
-            <table>
-                <tr>
-                    <th>Period/<br>Day</th>
-                    <th>8.00-8.50</th>
-                    <th>9.00-9.50</th>
-                    <th>10.00-10.50</th>
-                    <th>11.00-11.50</th>
-                    <th>12.00-12.50</th>
-                    <th>13.00-13.50</th>
-                    <th>14.00-14.50</th>
-                    <th>15.00-15.50</th>
-                    <th>16.00-16.50</th>
-                    <th>17.00-17.50</th>
-                    <th>18.00-18.50</th>
-                </tr>
-                <tr>
-                    <th>Monday</th>
-                    <td colspan="2"></td>
-                    <td class="lecture" colspan="2">Mppi</td>
-                    <td colspan="7"></td>
-                </tr>
-                <tr>
-                    <th>Tuesday</th>
-                    <td class="seminar" colspan="2">Dus</td>
-                    <td class="lecture" colspan="2">LA<br>WEBTE</td>
-                    <td colspan="7"></td>
-                </tr>
-                <tr>
-                    <th>Wednesday</th>
-                    <td class="seminar" colspan="2">PS</td>
-                    <td></td>
-                    <td class="seminar" colspan="2">PE</td>
-                    <td class="lecture" colspan="2">WEBTECH</td>
-                    <td colspan="4"></td>
-                </tr>
-                <tr>
-                    <th>Thursday</th>
-                    <td class="seminar" colspan="2">WEBTECH</td>
-                    <td class="lecture" colspan="2">DUs</td>
-                    <td colspan=""></td>
-                    <td class="lecture" colspan="2">PS</td>
-                    <td class="seminar" colspan="2">MPPI</td>
-                    <td class="seminar" colspan="2">LA</td>
-                </tr>
-                <tr>
-                    <th>Friday</th>
-                    <td colspan="11"></td>
-                </tr>
-            </table>
-        </article>
+<header>
+    <a href="#" class="logo">Cviko1</a>
+    <input type="checkbox" id="menu">
+    <label for="menu">
+        <img class="menu-icon" src="./images/menu-icon.svg" alt="Menu Icon">
+        <img class="close-icon" src="./images/close-icon.svg" alt="Close icon">
+    </label>
+    <nav class="navbar">
+        <ul>
+            <li>
+                <a href="index.html">O mne<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="cv.html">Životopis<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="syllabus.html">Rozvrh<span></span><span></span></a>
+            </li>
+            <li>
+                <a href="image.html">Obrázok<span></span><span></span></a>
+            </li>
+        </ul>
+    </nav>
+    <label for="menu" class="overlay"></label>
+</header>
+
+<div class="content">
+    <h1>Rozvrh</h1>
+    <div class="horizontal-table">
+        <table>
+            <tr class="hours">
+                <th>Period/<br>Day</th>
+                <th>1<br>8.00</th>
+                <th>2<br>9.00</th>
+                <th>3<br>10.00</th>
+                <th>4<br>11.00</th>
+                <th>5<br>12.00</th>
+                <th>6<br>13.00</th>
+                <th>7<br>14.00</th>
+                <th>8<br>15.00</th>
+                <th>9<br>16.00</th>
+                <th>10<br>17.00</th>
+                <th>11<br>18.00</th>
+                <th>12<br>19.00</th>
+            </tr>
+            <tr class="day">
+                <th>Monday</th>
+                <td colspan="2"></td>
+                <td class="lecture" colspan="2">MPPI<br>DE300</td>
+                <td colspan="8"></td>
+            </tr>
+            <tr class="day">
+                <th>Tuesday</th>
+                <td class="seminar" colspan="2">DUS<br>cpu-c</td>
+                <td class="lecture" colspan="2">LA1 - DE300<br>WEBTE1 - CD300</td>
+                <td colspan="8"></td>
+            </tr>
+            <tr class="day">
+                <th>Wednesday</th>
+                <td class="seminar" colspan="2">PS<br>bU02</td>
+                <td></td>
+                <td class="seminar" colspan="2">TK3<br>tm</td>
+                <td class="lecture" colspan="2">WEBTE1<br>CD300</td>
+                <td colspan="5"></td>
+            </tr>
+            <tr class="day">
+                <th>Thursday</th>
+                <td class="seminar" colspan="2">WEBTE1<br>cpu-a</td>
+                <td class="lecture" colspan="2">DUS<br>DE300</td>
+                <td colspan="1"></td>
+                <td class="lecture" colspan="2">PS<br>CD300</td>
+                <td class="seminar" colspan="2">MPPI<br>E133</td>
+                <td class="seminar" colspan="2">LA1<br>DE150</td>
+                <td colspan="1"></td>
+            </tr>
+            <tr>
+                <th class="day">Friday</th>
+                <td colspan="12"></td>
+            </tr>
+        </table>
     </div>
+    <div class="vertical-table">
+        <table>
+            <tr>
+                <th>Period/Day</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+            </tr>
+            <tr>
+                <th>1<br>8.00</th>
+                <td></td>
+                <td class="seminar" rowspan="2">DUS<br>cpu-c</td>
+                <td class="seminar" rowspan="2" >PS<br>bU02</td>
+                <td class="seminar" rowspan="2">WEBTE1<br>cpu-a</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>2<br>9.00</th>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>3<br>10.00</th>
+                <td class="lecture" rowspan="2">MPPI<br>DE300</td>
+                <td class="lecture" rowspan="2">LA1 - DE300<br>WEBTE1 - CD300</td>
+                <td></td>
+                <td class="lecture" rowspan="2">DUS<br>DE300</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>4<br>11.00</th>
+                <td class="seminar" rowspan="2">TK3</td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th>5<br>12.00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>6<br>13.00</th>
+                <td></td>
+                <td></td>
+                <td class="lecture" rowspan="2">WEBTE1<br>CD300</td>
+                <td class="lecture" rowspan="2">PS<br>DE300</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>7<br>14.00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>8<br>15.00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="seminar" rowspan="2">MPPI<br>E113</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>9<br>16.00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>10<br>17.00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="seminar" rowspan="2">LA1<br>DE150</td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>11<br>18.00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+    </div>
+    <div>
+        <p class="seminar">Cviko</p>
+        <p class="lecture">Prednáška</p>
+    </div>
+    <footer>
+        <ul>
+            <li><a href="https://aladin.fei.stuba.sk/rozvrh/">Odkaz na harmonogram</a></li>
+        </ul>
+    </footer>
+</div>
 </body>
 </html>
